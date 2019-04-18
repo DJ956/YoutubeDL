@@ -1,0 +1,11 @@
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.csprojAssemblyReference.cache
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.csproj.CoreCompileInputs.cache
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\bin\Debug\YoutubeDL.exe.config
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\bin\Debug\YoutubeDL.exe
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\bin\Debug\YoutubeDL.pdb
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\bin\Debug\libvideo.dll
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.csproj.CopyComplete
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.exe
+C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.pdb
