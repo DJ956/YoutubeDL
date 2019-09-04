@@ -9,3 +9,16 @@ C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\bin\Debug\System.Diagnostics.Diagno
 C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.csproj.CopyComplete
 C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.exe
 C:\Users\DJ\source\repos\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.pdb
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\YoutubeDL.exe.config
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\YoutubeDL.exe
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\YoutubeDL.pdb
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\libvideo.dll
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.csprojAssemblyReference.cache
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.MainForm.resources
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.csproj.GenerateResource.cache
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.csproj.CopyComplete
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.exe
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.pdb

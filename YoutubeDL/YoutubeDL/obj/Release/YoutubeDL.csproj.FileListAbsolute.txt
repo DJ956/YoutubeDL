@@ -1,0 +1,17 @@
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\YoutubeDL.exe.config
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\YoutubeDL.exe
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\YoutubeDL.pdb
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\libvideo.dll
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\System.Diagnostics.DiagnosticSource.dll
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.csprojAssemblyReference.cache
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.MainForm.resources
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.csproj.GenerateResource.cache
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.csproj.CopyComplete
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.exe
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.pdb
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\YoutubeDL.exe.manifest
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\YoutubeDL.application
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.exe.manifest
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.application
