@@ -77,7 +77,7 @@ namespace YoutubeDL
             }
             else { root = textBoxFolder.Text; }
 
-            
+            labelProgress.Text = "ダウンロード開始...";
             var progress = new Progress<int>(UpdateProgress);
             var list = new List<string>();
             foreach(ListViewItem item in listViewVideos.Items) { list.Add(item.Text); }
