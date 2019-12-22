@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideoLibrary;
 using System.IO;
+using System.Linq;
 
 namespace YoutubeDL
 {
@@ -16,6 +12,8 @@ namespace YoutubeDL
     {
         private static readonly string DEFAULT = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos),
             "Youtube");
+
+        private static readonly char[] INVALID_CHARS = Path.GetInvalidFileNameChars();
 
         private YouTube youTube;
         private int maxCount;
@@ -92,11 +90,22 @@ namespace YoutubeDL
         {
             var buffer = new byte[4096];
             foreach (var item in items)
-            {                
-                var video = youTube.GetVideo(item);
-                videoTitle = video.Title;                
+            {
+                YouTubeVideo video = null;
+                try
+                {
+                    video = youTube.GetVideo(item);
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, $"Not found {item}", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    continue;
+                }
+
+                videoTitle = video.Title;
+                videoTitle = string.Concat(videoTitle.Select(c => INVALID_CHARS.Contains(c) ? '_' : c));
                 
-                var fileName = $"{video.Title}.{video.FileExtension}";
+                var fileName = $"{videoTitle}.{video.FileExtension}";
                 var path = Path.Combine(root, fileName);
                                 
                 using (var memory = new MemoryStream(video.GetBytes()))
