@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ファイルFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.終了EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.labelProgress = new System.Windows.Forms.ToolStripStatusLabel();
             this.progressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +44,9 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.終了EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.OpenFileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,24 +61,34 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // ファイルFToolStripMenuItem
+            // 
+            this.ファイルFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenFileMenuItem,
+            this.toolStripSeparator1,
+            this.終了EToolStripMenuItem});
+            this.ファイルFToolStripMenuItem.Name = "ファイルFToolStripMenuItem";
+            this.ファイルFToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.ファイルFToolStripMenuItem.Text = "ファイル(&F)";
+            // 
+            // 終了EToolStripMenuItem
+            // 
+            this.終了EToolStripMenuItem.Name = "終了EToolStripMenuItem";
+            this.終了EToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.終了EToolStripMenuItem.Text = "終了(&E)";
+            this.終了EToolStripMenuItem.Click += new System.EventHandler(this.終了EToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.labelProgress,
-            this.progressBar});
+            this.progressBar,
+            this.versionLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 270);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(447, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // ファイルFToolStripMenuItem
-            // 
-            this.ファイルFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.終了EToolStripMenuItem});
-            this.ファイルFToolStripMenuItem.Name = "ファイルFToolStripMenuItem";
-            this.ファイルFToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.ファイルFToolStripMenuItem.Text = "ファイル(&F)";
             // 
             // labelProgress
             // 
@@ -169,12 +182,23 @@
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
-            // 終了EToolStripMenuItem
+            // toolStripSeparator1
             // 
-            this.終了EToolStripMenuItem.Name = "終了EToolStripMenuItem";
-            this.終了EToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.終了EToolStripMenuItem.Text = "終了(&E)";
-            this.終了EToolStripMenuItem.Click += new System.EventHandler(this.終了EToolStripMenuItem_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // OpenFileMenuItem
+            // 
+            this.OpenFileMenuItem.Name = "OpenFileMenuItem";
+            this.OpenFileMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.OpenFileMenuItem.Text = "開く(&O)...";
+            this.OpenFileMenuItem.Click += new System.EventHandler(this.OpenFileMenuItem_Click);
+            // 
+            // versionLabel
+            // 
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(54, 17);
+            this.versionLabel.Text = "バージョン:";
             // 
             // MainForm
             // 
@@ -225,5 +249,8 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.ToolStripMenuItem 終了EToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OpenFileMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripStatusLabel versionLabel;
     }
 }

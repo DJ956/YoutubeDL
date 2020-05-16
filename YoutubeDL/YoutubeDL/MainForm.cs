@@ -5,19 +5,20 @@ using System.Windows.Forms;
 using VideoLibrary;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace YoutubeDL
 {
     public partial class MainForm : Form
     {
-        private static readonly string DEFAULT = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos),
-            "Youtube");
+        private static readonly string DEFAULT = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos), "Youtube");
+        private static readonly string LOG_PATH = Path.Combine(DEFAULT, "youtubedl.log");
 
         private static readonly char[] INVALID_CHARS = Path.GetInvalidFileNameChars();
 
         private YouTube youTube;
-        private int maxCount;
-        private string videoTitle;
+        private long? maxCount = 0;        
 
         public MainForm()
         {
@@ -33,6 +34,8 @@ namespace YoutubeDL
             header.Name = "url";
             header.Width = listViewVideos.Width;
             listViewVideos.Columns.Add(header);
+            textBoxFolder.Text = DEFAULT;
+            versionLabel.Text = $"バージョン:{FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion}";
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -50,8 +53,7 @@ namespace YoutubeDL
         }
 
         private void ButtonAdd_Click(object sender, EventArgs e)
-        {
-            
+        {            
             var url = textBoxURL.Text;
             if(url == "" && !Clipboard.ContainsText()) { return; }
             else if(url == "" && Clipboard.ContainsText()) { url = Clipboard.GetText(); }
@@ -75,67 +77,110 @@ namespace YoutubeDL
             }
             else { root = textBoxFolder.Text; }
 
+            //ダウンロード処理
             labelProgress.Text = "ダウンロード開始...";
             var progress = new Progress<int>(UpdateProgress);
             var list = new List<string>();
             foreach(ListViewItem item in listViewVideos.Items) { list.Add(item.Text); }
 
-            await Task.Run(() => SaveVideos(root, list, progress));
+            //結果出力
+            var result = await Task.Run(() => SaveVideosAsync(root, list, progress));
+            var successCnt = result.Values.Count(x => x == true);
+            Utils.Logging(LOG_PATH, result);
+            Process.Start(LOG_PATH);
+            Process.Start(root);
 
-            MessageBox.Show($"保存しました:{root}", "ダウンロード完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"保存しました:{root}", $"ダウンロード完了 {successCnt}/{result.Count}", MessageBoxButtons.OK, MessageBoxIcon.Information);
             buttonClear.PerformClick();
         }
 
-        private void SaveVideos(string root, List<string> items, IProgress<int> progress)
+
+        private async Task<Dictionary<string, bool>> SaveVideosAsync(string root, List<string> items, IProgress<int> progress)
         {
+            var results = new Dictionary<string, bool>();
+
             var buffer = new byte[4096];
-            foreach (var item in items)
+            for (int i = 0; i < items.Count; i++)
             {
+                var item = items[i];
                 YouTubeVideo video = null;
                 try
                 {
                     video = youTube.GetVideo(item);
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, $"Not found {item}", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, $"Not found {item}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    results.Add(item, false);
                     continue;
                 }
 
-                videoTitle = video.Title;
+                var videoTitle = video.Title;
                 videoTitle = string.Concat(videoTitle.Select(c => INVALID_CHARS.Contains(c) ? '_' : c));
-                
-                var fileName = $"{videoTitle}.{video.FileExtension}";
-                var path = Path.Combine(root, fileName);
-                                
-                using (var memory = new MemoryStream(video.GetBytes()))
-                using (var writer = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
+                if (videoTitle == "Youtube") videoTitle += i; //ファイル名がYoutubeで被らないようにする
+
+                Invoke(new Action(() =>
                 {
-                    maxCount = (int)memory.Length;
-                    while (memory.Position < memory.Length)
+                    this.Text = $"{i + 1}/{items.Count} - {video.Title}";
+                }));
+
+                var fileName = $"{videoTitle}{video.FileExtension}";
+                var path = Path.Combine(root, fileName);
+
+                try
+                {
+                    using (var writer = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
+                    using (var client = new VideoClient())
+                    using (var input = await client.StreamAsync(video))
                     {
-                        memory.Read(buffer, 0, buffer.Length);
-                        writer.Write(buffer, 0, buffer.Length);
-                        progress.Report((int)memory.Position);
+                        maxCount = video.ContentLength.Value;
+                        int read;
+                        int totalRead = 0;
+                        while ((read = await input.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                        {
+                            await writer.WriteAsync(buffer, 0, read);
+
+                            totalRead += read;
+                            progress.Report(totalRead);
+                        }
+                        await writer.FlushAsync();
                     }
-                    writer.Flush();
                 }
-                
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, $"Download error {item}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    results.Add($"{item} : {videoTitle}", false);
+                    continue;
+                }
+
+                results.Add($"{item} : {videoTitle}", true);
             }
+
+            return results;
         }
 
         private void UpdateProgress(int i)
         {
-            double value = (double)i / maxCount * 100;            
+            double value = (double)i / maxCount.Value * 100;            
             labelProgress.Text = $"処理中:{(int)value}%";
-            progressBar.Value = (int)value;
-            Text = videoTitle;
+            progressBar.Value = (int)value;            
         }
 
         private void 終了EToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
+        }
+
+        private async void OpenFileMenuItem_Click(object sender, EventArgs e)
+        {
+            var dialog = new OpenFileDialog();
+            dialog.Filter = "URLリスト(*.txt)|*.txt";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                var lists = await Utils.LoadUrlsAsync(dialog.FileName);
+                lists.ForEach(li => listViewVideos.Items.Add(li));
+            }
         }
     }
 }

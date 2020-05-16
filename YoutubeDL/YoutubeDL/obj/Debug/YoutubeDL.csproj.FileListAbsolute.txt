@@ -48,3 +48,17 @@ C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.B
 C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Memory.xml
 C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\YoutubeDL.exe.manifest
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\YoutubeDL.application
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Buffers.dll
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Memory.dll
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Numerics.Vectors.dll
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Buffers.xml
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Memory.xml
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Numerics.Vectors.xml
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.exe.manifest
+D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Debug\YoutubeDL.application
