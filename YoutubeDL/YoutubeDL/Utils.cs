@@ -20,7 +20,7 @@ namespace YoutubeDL
                 while((line = await reader.ReadLineAsync()) != null)
                 {
                     var match = reg.Match(line);
-                    if (match.Success)
+                    if (match.Success && !results.Contains(line))
                     {
                         results.Add(line);
                     }

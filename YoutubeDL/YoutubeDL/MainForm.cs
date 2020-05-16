@@ -117,7 +117,7 @@ namespace YoutubeDL
 
                 var videoTitle = video.Title;
                 videoTitle = string.Concat(videoTitle.Select(c => INVALID_CHARS.Contains(c) ? '_' : c));
-                if (videoTitle == "Youtube") videoTitle += i; //ファイル名がYoutubeで被らないようにする
+                if (videoTitle == "YouTube") videoTitle += i; //ファイル名がYoutubeで被らないようにする
 
                 Invoke(new Action(() =>
                 {
