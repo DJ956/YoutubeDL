@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeDL", "YoutubeDL\YoutubeDL.csproj", "{BD1EBF49-9FAC-4619-8248-C87407D33204}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "YoutubeDLSetup", "YoutubeDLSetup\YoutubeDLSetup.vdproj", "{C3A9036C-8F19-464C-9CC5-462C7CFBA258}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "YoutubeDL-setup", "YoutubeDL-setup\YoutubeDL-setup.vdproj", "{538BFDB9-E942-4D9A-BCCF-2CF3659C01CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{BD1EBF49-9FAC-4619-8248-C87407D33204}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD1EBF49-9FAC-4619-8248-C87407D33204}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD1EBF49-9FAC-4619-8248-C87407D33204}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3A9036C-8F19-464C-9CC5-462C7CFBA258}.Debug|Any CPU.ActiveCfg = Debug
-		{C3A9036C-8F19-464C-9CC5-462C7CFBA258}.Release|Any CPU.ActiveCfg = Release
+		{538BFDB9-E942-4D9A-BCCF-2CF3659C01CB}.Debug|Any CPU.ActiveCfg = Debug
+		{538BFDB9-E942-4D9A-BCCF-2CF3659C01CB}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

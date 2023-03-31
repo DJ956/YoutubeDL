@@ -36,6 +36,11 @@ namespace YoutubeDL
             listViewVideos.Columns.Add(header);
             textBoxFolder.Text = DEFAULT;
             versionLabel.Text = $"バージョン:{FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion}";
+
+            if(Directory.Exists(DEFAULT) == false)
+            {
+                Directory.CreateDirectory(DEFAULT);
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)

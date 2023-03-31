@@ -23,7 +23,6 @@ C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\Youtub
 C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\libvideo.dll
 C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\System.Diagnostics.DiagnosticSource.dll
 C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\System.Diagnostics.DiagnosticSource.xml
-C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.csprojAssemblyReference.cache
 C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.MainForm.resources
 C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.csproj.GenerateResource.cache
 C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.exe.manifest
@@ -51,3 +50,7 @@ D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\System.Buffers.xml
 D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\System.Memory.xml
 D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\System.Numerics.Vectors.xml
 D:\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.csproj.AssemblyReference.cache
+C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.csproj.SuggestedBindingRedirects.cache
+C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.exe.config
+C:\Users\dexte\Documents\GitHub\YoutubeDL\YoutubeDL\YoutubeDL\obj\Release\YoutubeDL.csproj.CoreCompileInputs.cache
